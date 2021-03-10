@@ -11,11 +11,31 @@ namespace Minecraft
 {
     public partial class MainWindow : Form
     {
+        private readonly IniFile Config = new IniFile(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\connorcode\Minecraft\settings.ini");
         private string PlayerName;
 
         public MainWindow()
         {
             InitializeComponent();
+            if (!Config.KeyExists("setup"))
+                IniFile.SetDefaultConfig(Config);
+            else
+                UpdateVars();
+        }
+
+        private void UpdateVars()
+        {
+            try
+            {
+                PlayerName = Config.Read("user");
+            }
+            catch
+            {
+                MessageBox.Show(@"ERR reading Config File...");
+                IniFile.SetDefaultConfig(Config);
+            }
+
+            textBox1.Text = PlayerName;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -103,6 +123,11 @@ namespace Minecraft
             DoClick();
             PlayerName = textBox1.Text;
             ReDrawPlayer();
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Config.Write("user", PlayerName);
         }
     }
 }
