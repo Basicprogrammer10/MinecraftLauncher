@@ -21,6 +21,8 @@ namespace Minecraft
         private void Form1_Load(object sender, EventArgs e)
         {
             DrawApi();
+            System.Media.SoundPlayer Player = new System.Media.SoundPlayer(@"V:\Programming\C#\MinecraftLauncher\src\Resources\Intro.wav");
+            Player.Play();
         }
 
         private void ReDrawPlayer()
@@ -91,8 +93,14 @@ namespace Minecraft
             return Encoding.UTF8.GetString(Base64EncodedBytes);
         }
 
+        private void DoClick()
+        {
+            new System.Media.SoundPlayer(@"V:\Programming\C#\MinecraftLauncher\src\Resources\Click.wav").Play();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
+            DoClick();
             PlayerName = textBox1.Text;
             ReDrawPlayer();
         }
