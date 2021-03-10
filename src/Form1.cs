@@ -12,6 +12,7 @@ namespace Minecraft
     public partial class MainWindow : Form
     {
         private readonly IniFile Config = new IniFile(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\connorcode\Minecraft\settings.ini");
+        //private readonly IniFile Cache = new IniFile(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\connorcode\Minecraft\Cache");
         private string PlayerName;
 
         public MainWindow()

@@ -43,6 +43,7 @@ namespace Minecraft
             this.sigma_logo = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.version_box = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.session_dot)).BeginInit();
@@ -66,7 +67,7 @@ namespace Minecraft
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(59)))), ((int)(((byte)(73)))));
             this.panel4.Controls.Add(this.api_label);
             this.panel4.Controls.Add(this.session_label);
             this.panel4.Controls.Add(this.session_dot);
@@ -153,6 +154,7 @@ namespace Minecraft
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panel3.Controls.Add(this.version_box);
             this.panel3.Controls.Add(this.sigma_logo);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.textBox1);
@@ -189,6 +191,14 @@ namespace Minecraft
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
             // 
+            // version_box
+            // 
+            this.version_box.FormattingEnabled = true;
+            this.version_box.Location = new System.Drawing.Point(319, 240);
+            this.version_box.Name = "version_box";
+            this.version_box.Size = new System.Drawing.Size(121, 21);
+            this.version_box.TabIndex = 3;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,6 +209,7 @@ namespace Minecraft
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sigma\'s Minecraft Lancher";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -232,6 +243,7 @@ namespace Minecraft
         private System.Windows.Forms.PictureBox session_dot;
         private System.Windows.Forms.Label session_label;
         private System.Windows.Forms.Label api_label;
+        private System.Windows.Forms.ComboBox version_box;
     }
 }
 
