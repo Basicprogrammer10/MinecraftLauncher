@@ -6,7 +6,6 @@ using System.Net;
 using System.Text;
 using System.Windows.Forms;
 using Minecraft.Properties;
-
 namespace Minecraft
 {
     public partial class MainWindow : Form
@@ -129,6 +128,12 @@ namespace Minecraft
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             Config.Write("user", PlayerName);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //var runCoommand = "";
+
         }
     }
 }

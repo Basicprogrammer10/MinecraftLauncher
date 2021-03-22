@@ -40,10 +40,11 @@ namespace Minecraft
             this.player_name = new System.Windows.Forms.Label();
             this.player_face = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.version_box = new System.Windows.Forms.ComboBox();
             this.sigma_logo = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.version_box = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.session_dot)).BeginInit();
@@ -154,6 +155,7 @@ namespace Minecraft
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.version_box);
             this.panel3.Controls.Add(this.sigma_logo);
             this.panel3.Controls.Add(this.button1);
@@ -163,6 +165,14 @@ namespace Minecraft
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(575, 450);
             this.panel3.TabIndex = 2;
+            // 
+            // version_box
+            // 
+            this.version_box.FormattingEnabled = true;
+            this.version_box.Location = new System.Drawing.Point(319, 240);
+            this.version_box.Name = "version_box";
+            this.version_box.Size = new System.Drawing.Size(121, 21);
+            this.version_box.TabIndex = 3;
             // 
             // sigma_logo
             // 
@@ -191,13 +201,15 @@ namespace Minecraft
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // version_box
+            // button2
             // 
-            this.version_box.FormattingEnabled = true;
-            this.version_box.Location = new System.Drawing.Point(319, 240);
-            this.version_box.Name = "version_box";
-            this.version_box.Size = new System.Drawing.Size(121, 21);
-            this.version_box.TabIndex = 3;
+            this.button2.Location = new System.Drawing.Point(285, 388);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // MainWindow
             // 
@@ -244,6 +256,7 @@ namespace Minecraft
         private System.Windows.Forms.Label session_label;
         private System.Windows.Forms.Label api_label;
         private System.Windows.Forms.ComboBox version_box;
+        private System.Windows.Forms.Button button2;
     }
 }
 
